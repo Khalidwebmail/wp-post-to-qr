@@ -23,6 +23,7 @@
  */
 
 use QR\Code\Wp_Code_Settings;
+use QR\Code\Wp_Enqueue;
 use QR\Code\Wp_Generate_Code;
 
 if( ! defined( 'ABSPATH' ) ) {
@@ -89,6 +90,7 @@ final class Wp_Post_QR {
 	public function wp_ptqr_init_plugin() {
 		new Wp_Generate_Code();
         new Wp_Code_Settings();
+		new Wp_Enqueue();
 	}
 }
 
