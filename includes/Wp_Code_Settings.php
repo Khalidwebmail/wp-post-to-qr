@@ -25,6 +25,11 @@ class Wp_Code_Settings
 
         add_settings_field( 'pqrc_width', __( 'QR code width', 'qr-code-for-post' ), [ $this, 'wp_ptqr_display_field' ], 'general', 'pqrc_section', [ 'pqrc_width' ] );
 
+
+        add_settings_field( 'pqrc_toggle', __( 'QR code toggle', 'qr-code-for-post' ), [ $this, 'wp_ptqr_display_toggle_field' ], 'general', 'pqrc_section', [ 'pqrc_toggle' ] );
+
+        add_settings_field( 'pqrc_toggle', __( 'QR code toggle', 'qr-code-for-post' ), [ $this, 'wp_ptqr_display_toggle_field' ], 'general', 'pqrc_section', [ 'pqrc_toggle' ] );
+        
         register_setting( 'general', 'pqrc_height', [ 'sanitize_callback' => 'esc_attr' ] );
         register_setting( 'general', 'pqrc_width',  [ 'sanitize_callback' => 'esc_attr' ] );
     }
